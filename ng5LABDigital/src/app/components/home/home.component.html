@@ -1,0 +1,99 @@
+<header>
+  <app-nav></app-nav>
+</header>
+
+<main>
+  <div class="container">
+    <div class="row">
+
+      <div class="row wow pt-4 fadeIn" data-wow-delay="0.2s">
+        <div class="col-md-12">
+          <div class="card">
+
+            <div class="view overlay hm-white-slight">
+              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(28).jpg" class="img-fluid" alt="">
+            </div>
+
+            <div class="card-body text-center mb-3">
+              <h3 class="card-title mt-2 pb-4">
+                <strong>Elegant Communication</strong>
+              </h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam Lorem ipsum
+                dolor sit amet, consectetuer adipiscing elit, sed diam Lorem ipsum dolor sit amet, consectetuer adipiscing
+                elit, sed diam.
+              </p>
+              <a href="#" class="btn btn-blue-grey btn-md">LINK TEXT</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row pt-4">
+      <div class="owl-carousel owl-theme">
+        <div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(29).jpg" class="img-fluid" alt="">
+        </div>
+        <div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(30).jpg" class="img-fluid" alt="">
+        </div>
+        <div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg" class="img-fluid" alt="">
+        </div>
+        <div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(32).jpg" class="img-fluid" alt="">
+        </div>
+        <div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(33).jpg" class="img-fluid" alt="">
+        </div>
+        <div>
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(34).jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-4">
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <h5>
+          <strong>Happiness Indicator</strong>
+        </h5>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6">
+
+        <form [formGroup]="formGroup" (ngSubmit)="postDetails(formGroup.value)">
+          <p class="h4 text-center mb-4">Elegant Communication</p>
+
+          <input type="text" formControlName="fullName" placeholder="full name" class="form-control" />
+          <div class="alert" *ngIf="!formGroup.controls['fullName'].valid && formGroup.controls['fullName'].touched">Full name is required!</div>
+          <br>
+
+          <input type="email" formControlName="emailAddress" placeholder="email address" class="form-control" />
+          <div class="alert" *ngIf="!formGroup.controls['emailAddress'].valid && formGroup.controls['emailAddress'].touched">Email Address is required!</div>
+          <br>
+
+          <input type="number" formControlName="contactNumber"  placeholder="contact number" class="form-control" />
+          <div class="alert" *ngIf="!formGroup.controls['contactNumber'].valid && formGroup.controls['contactNumber'].touched">Contact Number is required!</div>
+          <br>
+
+          <input type="text" formControlName="description" placeholder="digital strategy or transformation" class="form-control" />
+          <div class="alert" *ngIf="!formGroup.controls['description'].valid && formGroup.controls['description'].touched">Description is required!</div>
+
+          <div class="text-center mt-4">
+            <button class="btn btn-yellow btn-lg btn-block" type="submit" [disabled]="!formGroup.valid">Contact me</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</main>
+<!-- fixed-bottom -->
+<footer class="page-footer text-center font-small mt-4 wow fadeIn ">
+  <app-footer></app-footer>
+</footer>

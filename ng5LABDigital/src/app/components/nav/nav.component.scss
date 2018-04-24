@@ -1,0 +1,23 @@
+img {
+    height: 50px;
+}
+
+.navbar {
+    background-color: rgba(68,84,89,0.9);
+}
+
+
+.navbar.navbar-dark .breadcrumb .nav-item.active > .nav-link, .navbar.navbar-dark .navbar-nav .nav-item.active > .nav-link {
+    color: #ffff00; 
+    background-color: transparent;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    color: #ffff00; 
+}
+
+.navbar.navbar-dark .navbar-nav .nav-link {
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
