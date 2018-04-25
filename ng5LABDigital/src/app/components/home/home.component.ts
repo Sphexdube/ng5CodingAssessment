@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 
+
 declare var jQuery: any;
 
 @Component({
@@ -26,10 +27,18 @@ export class HomeComponent implements OnInit {
       'description': [null, Validators.required]
     });
 
-   }
+  }
 
   ngOnInit() {
-    jQuery('.owl-carousel').owlCarousel();
+    jQuery('.owl-carousel').owlCarousel({
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      margin: 0,
+      loop: true,
+      autoWidth: false,
+      items: 1,
+      autoPlayTimeout: 1000
+    });
   }
 
   postDetails(post) {
